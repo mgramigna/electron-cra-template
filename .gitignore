@@ -89,4 +89,4 @@ typings/
 out/
 
 # CRA build
-src/app/build
+react-app/build

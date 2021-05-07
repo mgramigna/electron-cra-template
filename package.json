@@ -3,10 +3,10 @@
   "productName": "electron-cra-template",
   "version": "1.0.0",
   "description": "My Electron application description",
-  "main": "src/electron.js",
+  "main": "electron/electron.js",
   "scripts": {
     "build": "npm run build:frontend && npm run make",
-    "build:frontend": "cd ./src/app && PUBLIC_URL=./ npm run build",
+    "build:frontend": "cd ./react-app && PUBLIC_URL=./ npm run build",
     "lint": "eslint \"**/*.js\"",
     "lint:fix": "eslint \"./**/*.js\" --fix",
     "make": "electron-forge make",
@@ -16,7 +16,7 @@
     "publish": "electron-forge publish",
     "start": "concurrently -k \"npm:start:frontend\" \"npm:start:electron\"",
     "start:electron": "wait-on tcp:3000 && electron-forge start",
-    "start:frontend": "cd ./src/app && BROWSER=none npm start"
+    "start:frontend": "cd ./react-app && BROWSER=none npm start"
   },
   "keywords": [],
   "author": {

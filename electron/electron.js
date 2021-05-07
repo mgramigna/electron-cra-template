@@ -13,13 +13,14 @@ const createWindow = () => {
     width: 800,
     height: 600,
     webPreferences: {
-      nodeIntegration: true,
-      contextIsolation: false,
+      preload: path.join(__dirname, './preload.js'),
     },
   });
 
   // load build assets if production, localhost URL otherwise
-  const mainUrl = app.isPackaged ? `file://${path.join(__dirname, './app/build/index.html')}` : 'http://localhost:3000';
+  const mainUrl = app.isPackaged
+    ? `file://${path.join(__dirname, '../react-app/build/index.html')}`
+    : 'http://localhost:3000';
   mainWindow.loadURL(mainUrl);
 
   // Open the DevTools.

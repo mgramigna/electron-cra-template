@@ -1,1 +1,2 @@
-src/app/build/*
+react-app/build
+out

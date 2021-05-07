@@ -1,6 +1,5 @@
 import logo from './logo.svg';
 import './App.css';
-const a = 'asdf';
 
 function App() {
   return (
